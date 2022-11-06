@@ -1,5 +1,6 @@
 import React from "react";
 import Expense from "./component/Expenses/Expense";
+import NewExpense from "./component/NewExpense/NewExpense";
 
 // import logo from "./logo.svg";
 import "./App.css";
@@ -34,9 +35,20 @@ const App = () => {
   //   React.createElement("h2", {}, "let started"),
   //   React.createElement(Expense, { items: expenses })
   // );
+
+
+  const addExpenseHandler = expense => {
+
+    console.log('In App.js');
+    console.log(expense);
+
+  };
+
+
+
 return(
   <div className="App">
-    <h2>let started</h2>
+    <NewExpense onAddExpense={addExpenseHandler}/>
     <Expense items={expenses} />
   </div>);
 }
